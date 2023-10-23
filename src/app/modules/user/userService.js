@@ -12,7 +12,6 @@ const createUserService = async (userData) => {
     return { status: "fail", message: "Something went wrong" };
   }
 };
-
 const loginUserService = async (loginData) => {
   const user = await User.findOne({ email: loginData.email });
   if (!user) {
@@ -47,7 +46,6 @@ const getUsersService = async (userData, searchText) => {
   const users = await User.find(query);
   return users;
 };
-
 const getSpecificUserService = async (userId) => {
   const user = await User.findOne({ _id: userId }).select("-password");
   return user;

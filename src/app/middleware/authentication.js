@@ -18,7 +18,6 @@ const authentication =
 
       next();
     } catch (e) {
-      console.log(e);
       next();
     }
   };

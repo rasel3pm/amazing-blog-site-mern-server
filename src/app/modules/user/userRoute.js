@@ -8,7 +8,7 @@ router.post("/login", userController.loginUser);
 router.get("/", userController.getUser);
 router.get(
   "/:id",
-  authentication("admin", "user"),
+  authentication("user", "admin"),
   userController.getSpecificUser
 );
 

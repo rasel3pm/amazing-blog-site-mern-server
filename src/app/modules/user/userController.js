@@ -3,8 +3,9 @@ import userService from "./userService.js";
 const createUser = async (req, res) => {
   const userData = req.body;
   const user = await userService.createUserService(userData);
-  res.status(200).json({ status: "success", data: user });
+  res.status(200).json({ status: "success" });
 };
+
 const loginUser = async (req, res) => {
   const loginData = req.body;
   const result = await userService.loginUserService(loginData);
